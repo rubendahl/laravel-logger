@@ -40,17 +40,6 @@ class Activity extends Model
     ];
 
     /**
-     * The attributes that should be mutated .
-     *
-     * @var array
-     */
-    protected $casts = [
-        'created_at' => 'datetime',
-        'updated_at' => 'datetime',
-        'deleted_at' => 'datetime',
-    ];
-
-    /**
      * Fillable fields for a Profile.
      *
      * @var array
@@ -67,7 +56,15 @@ class Activity extends Model
         'methodType',
     ];
 
+    /**
+     * The attributes that should be mutated.
+     *
+     * @var array
+     */
     protected $casts = [
+        'created_at'    => 'datetime',
+        'updated_at'    => 'datetime',
+        'deleted_at'    => 'datetime',
         'description'   => 'string',
         'user'          => 'integer',
         'route'         => 'string',
