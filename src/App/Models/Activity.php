@@ -40,14 +40,14 @@ class Activity extends Model
     ];
 
     /**
-     * The attributes that should be mutated to dates.
+     * The attributes that should be mutated .
      *
      * @var array
      */
-    protected $dates = [
-        'created_at',
-        'updated_at',
-        'deleted_at',
+    protected $casts = [
+        'created_at' => 'datetime',
+        'updated_at' => 'datetime',
+        'deleted_at' => 'datetime',
     ];
 
     /**
