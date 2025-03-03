@@ -38,6 +38,7 @@
 
 @php
     switch (config('LaravelLogger.bootstapVersion')) {
+        case '5':
         case '4':
             $containerClass = 'card';
             $containerHeaderClass = 'card-header';
