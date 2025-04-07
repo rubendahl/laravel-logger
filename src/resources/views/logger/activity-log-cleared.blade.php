@@ -85,8 +85,8 @@
                                         {!! trans('LaravelLogger::laravel-logger.dashboard.menu.alt') !!}
                                     </span>
                                 </button>
-                                @if(config('LaravelLogger.bootstapVersion') == '4')
-                                    <div class="dropdown-menu dropdown-menu-right">
+                                @if(config('LaravelLogger.bootstapVersion') == '4' || config('LaravelLogger.bootstapVersion') == '5')
+                                    <div class="dropdown-menu dropdown-menu-right dropdown-menu-end">
                                         <a href="{{route('activity')}}" class="dropdown-item">
                                             <span class="text-primary">
                                                 <i class="fa fa-fw fa-mail-reply" aria-hidden="true"></i>

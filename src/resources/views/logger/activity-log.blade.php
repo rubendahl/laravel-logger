@@ -98,7 +98,15 @@
                                         {!! trans('LaravelLogger::laravel-logger.dashboard.menu.alt') !!}
                                     </span>
                                 </button>
-                                @if(config('LaravelLogger.bootstapVersion') == '4')
+                                @if(config('LaravelLogger.bootstapVersion') == '5')
+                                <div class="dropdown-menu dropdown-menu-end">
+                                    @include('LaravelLogger::forms.clear-activity-log')
+                                    <a href="{{route('cleared')}}" class="dropdown-item">
+                                        <i class="fa fa-fw fa-history" aria-hidden="true"></i>
+                                        {!! trans('LaravelLogger::laravel-logger.dashboard.menu.show') !!}
+                                    </a>
+                                </div>
+                                @elseif(config('LaravelLogger.bootstapVersion') == '4')
                                 <div class="dropdown-menu dropdown-menu-right">
                                     @include('LaravelLogger::forms.clear-activity-log')
                                     <a href="{{route('cleared')}}" class="dropdown-item">
