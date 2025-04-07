@@ -1,43 +1,56 @@
 {
-    "name": "jeremykenedy/laravel-logger",
-    "description": "Laravel Logger Package",
-    "keywords": [
-            "Laravel activity",
-            "Laravel activity logger",
-            "Laravel activity log",
-            "Laravel logger",
-            "Laravel log"
-        ],
+    "name": "rubendahl/laravel-activity-logger-basis",
+    "description": "Laravel Activity Logger - Basis-Only Package",
+    "keywords":
+    [
+        "Laravel activity",
+        "Laravel activity logger",
+        "Laravel activity log",
+        "Laravel logger",
+        "Laravel log"
+    ],
     "license": "MIT",
     "type": "package",
-    "authors": [
+    "authors":
+    [
+        {
+            "name": "kentdahl",
+            "email": "kent@kentdahl.no"
+        },
         {
             "name": "jeremykenedy",
             "email": "jeremykenedy@gmail.com"
         }
     ],
-    "minimum-stability": "dev",
-    "require": {
+    "minimum-stability": "stable",
+    "require":
+    {
         "php": ">=7.3.0|^8.0",
         "jaybizzle/laravel-crawler-detect": "1.*"
     },
-    "autoload": {
-        "psr-4": {
+    "autoload":
+    {
+        "psr-4":
+        {
             "jeremykenedy\\LaravelLogger\\": "src/"
         },
-        "files": [
+        "files":
+        [
             "src/App/Logic/helpers.php"
         ]
     },
-    "extra": {
-        "laravel": {
-            "providers": [
+    "extra":
+    {
+        "laravel":
+        {
+            "providers":
+            [
                 "jeremykenedy\\LaravelLogger\\LaravelLoggerServiceProvider"
             ]
         }
     },
-    "config": {
+    "config":
+    {
         "sort-packages": true
-    },
-    "minimum-stability": "stable"
+    }
 }

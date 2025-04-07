@@ -63,7 +63,7 @@ class LaravelLoggerServiceProvider extends ServiceProvider
     public function boot(Router $router)
     {
         $router->middlewareGroup('activity', [LogActivity::class]);
-        $this->loadTranslationsFrom(__DIR__.'/resources/lang/', 'LaravelLogger');
+        // $this->loadTranslationsFrom(__DIR__.'/resources/lang/', 'LaravelLogger');
     }
 
     /**
@@ -79,11 +79,11 @@ class LaravelLoggerServiceProvider extends ServiceProvider
             $this->mergeConfigFrom(__DIR__.'/config/laravel-logger.php', 'LaravelLogger');
         }
 
-        if (config(self::DISABLE_DEFAULT_ROUTES_CONFIG) == false) {
-            $this->loadRoutesFrom(__DIR__.'/routes/web.php');
-        }
+        // if (config(self::DISABLE_DEFAULT_ROUTES_CONFIG) == false) {
+        //     $this->loadRoutesFrom(__DIR__.'/routes/web.php');
+        // }
 
-        $this->loadViewsFrom(__DIR__.'/resources/views/', 'LaravelLogger');
+        // $this->loadViewsFrom(__DIR__.'/resources/views/', 'LaravelLogger');
         $this->loadMigrationsFrom(__DIR__.'/database/migrations');
 
         $this->registerEventListeners();
@@ -125,18 +125,18 @@ class LaravelLoggerServiceProvider extends ServiceProvider
      */
     private function publishFiles()
     {
-        $publishTag = 'LaravelLogger';
+        $publishTag = 'LaravelActivityLogger';
 
         $this->publishes([
             __DIR__.'/config/laravel-logger.php' => base_path('config/laravel-logger.php'),
         ], $publishTag);
 
-        $this->publishes([
-            __DIR__.'/resources/views' => base_path('resources/views/vendor/'.$publishTag),
-        ], $publishTag);
+        // $this->publishes([
+        //     __DIR__.'/resources/views' => base_path('resources/views/vendor/'.$publishTag),
+        // ], $publishTag);
 
-        $this->publishes([
-            __DIR__.'/resources/lang' => base_path('resources/lang/vendor/'.$publishTag),
-        ], $publishTag);
+        // $this->publishes([
+        //     __DIR__.'/resources/lang' => base_path('resources/lang/vendor/'.$publishTag),
+        // ], $publishTag);
     }
 }
